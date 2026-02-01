@@ -12,6 +12,7 @@ const uint8_t SPI_CS = 5; // CS pin in SPI mode
 //const uint8_t SPI_DRV_ENN = 8;  // DRV_ENN pin in SPI mode
 
 const int PEDAL_PIN = 34; //APPS sensor pin
+cosnt int THROTTLE_PIN = 35; //TPPS sensor pin
 
 TMC5160_SPI motor = TMC5160_SPI(SPI_CS); //Use default SPI peripheral and SPI settings.
 
@@ -51,7 +52,7 @@ void loop()
 
   int raw = analogRead(PEDAL_PIN);
 
-  float target = map(raw, 0, 2500, 0, 200); //2500 is max sensor reading after going through potential divider, 200 steps per revolution
+  float target = map(raw, 0, 2500, 0, 200); //2500 is max sensor reading after going through potential divider, 200 steps per revolution (1.8 deg per step)
 
   Serial.print("Target: ");
   Serial.print(target);
@@ -63,6 +64,10 @@ void loop()
   Serial.print(" | Sensor Signal: ");
   Serial.println(raw);
 
-  delay(1);
+
+  //Throttle Position Sensor
+  int raw_throttle = analogRead(THROTTLE_PIN);
+
+  delay(10);
   
 }
