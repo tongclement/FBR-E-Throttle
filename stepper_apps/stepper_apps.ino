@@ -12,7 +12,8 @@ const uint8_t SPI_CS = 5; // CS pin in SPI mode
 //const uint8_t SPI_DRV_ENN = 8;  // DRV_ENN pin in SPI mode
 
 const int PEDAL_PIN = 34; //APPS sensor pin
-cosnt int THROTTLE_PIN = 35; //TPPS sensor pin
+const int PEDAL_2_PIN = 33; //APPS2 sensor pin
+const int THROTTLE_PIN = 32; //TPPS sensor pin - note 35 is not allowed????
 
 TMC5160_SPI motor = TMC5160_SPI(SPI_CS); //Use default SPI peripheral and SPI settings.
 
@@ -62,12 +63,18 @@ void loop()
   Serial.print(" | Current position: ");
   Serial.print(motor.getCurrentPosition());
   Serial.print(" | Sensor Signal: ");
-  Serial.println(raw);
+  Serial.print(raw);
 
+  int raw_apps_2 = analogRead(PEDAL_2_PIN);
+  Serial.print(",");
+  Serial.print(raw_apps_2);
+  
 
   //Throttle Position Sensor
   int raw_throttle = analogRead(THROTTLE_PIN);
+  Serial.print(". T: ");
+  Serial.println(raw_throttle);
 
-  delay(10);
+  delay(100);
   
 }
