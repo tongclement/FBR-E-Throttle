@@ -131,7 +131,7 @@ void setup()
 }
 
 void loop()
-{
+{/*/
   // Serial input for adjusting PID Gains (might not work - code wont run maybe if it doesnt have input yet?)
   if (Serial.available()) {
     Kp = Serial.parseFloat();
@@ -139,4 +139,5 @@ void loop()
     Serial.println(Kp);
   }
   delay(100);
+  */
 }
