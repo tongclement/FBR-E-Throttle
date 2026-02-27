@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP BTS441TG
+D Power Switch ICs - Power Distribution Smart PWR High-Side Switch 1-CH
+K
+F https://www.infineon.com/dgdl/Infineon-BTS441TG-DS-v01_21-EN.pdf?fileId=5546d4625a888733015aa9afd69935dd
+$ENDCMP
+#
+#End Doc Library

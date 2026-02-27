@@ -1,0 +1,26 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#SamacSys ECAD Model BTS441TG
+#/684199/1908834/2.50/5/3/Integrated Circuit
+DEF BTS441TG IC 0 30 Y Y 1 F N
+F0 "IC" 950 300 50 H V L CNN
+F1 "BTS441TG" 950 200 50 H V L CNN
+F2 "BTS441TG" 950 100 50 H I L CNN
+F3 "https://www.infineon.com/dgdl/Infineon-BTS441TG-DS-v01_21-EN.pdf?fileId=5546d4625a888733015aa9afd69935dd" 950 0 50 H I L CNN
+F4 "Power Switch ICs - Power Distribution Smart PWR High-Side Switch 1-CH" 950 -100 50 H I L CNN "Description"
+F5 "4.5" 950 -200 50 H I L CNN "Height"
+F6 "726-BTS441TG" 950 -300 50 H I L CNN "Mouser Part Number"
+F7 "https://www.mouser.co.uk/ProductDetail/Infineon-Technologies/BTS441TG?qs=mzcOS1kGbgf58yqzVPhgKw%3D%3D" 950 -400 50 H I L CNN "Mouser Price/Stock"
+F8 "Infineon" 950 -500 50 H I L CNN "Manufacturer_Name"
+F9 "BTS441TG" 950 -600 50 H I L CNN "Manufacturer_Part_Number"
+DRAW
+X GND 1 0 0 200 R 50 50 0 0 P
+X IN 2 0 -100 200 R 50 50 0 0 P
+X VBB 3 1100 0 200 L 50 50 0 0 P
+X N.C. 4 0 -200 200 R 50 50 0 0 N
+X OUT 5 0 -300 200 R 50 50 0 0 P
+P 5 0 1 6 200 100 900 100 900 -400 200 -400 200 100 N
+ENDDRAW
+ENDDEF
+#
+#End Library
