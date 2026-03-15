@@ -2628,130 +2628,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Device:R"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 0)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "R"
-				(at 2.032 0 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "R"
-				(at 0 0 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at -1.778 0 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "~"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Resistor"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "R res resistor"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "R_*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "R_0_1"
-				(rectangle
-					(start -1.016 -2.54)
-					(end 1.016 2.54)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "R_1_1"
-				(pin passive line
-					(at 0 3.81 270)
-					(length 1.27)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -3.81 90)
-					(length 1.27)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "Device:R_Small"
 			(pin_numbers
 				(hide yes)
@@ -3481,7 +3357,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Interface_CAN_LIN:MCP2551-I-P"
+		(symbol "Interface_CAN_LIN:MCP2561-E-P"
 			(pin_names
 				(offset 1.016)
 			)
@@ -3497,7 +3373,7 @@
 					(justify left)
 				)
 			)
-			(property "Value" "MCP2551-I-P"
+			(property "Value" "MCP2561-E-P"
 				(at 2.54 8.89 0)
 				(effects
 					(font
@@ -3516,7 +3392,7 @@
 					(hide yes)
 				)
 			)
-			(property "Datasheet" "http://ww1.microchip.com/downloads/en/devicedoc/21667d.pdf"
+			(property "Datasheet" "http://ww1.microchip.com/downloads/en/DeviceDoc/25167A.pdf"
 				(at 0 0 0)
 				(effects
 					(font
@@ -3525,7 +3401,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "High-Speed CAN Transceiver, 1Mbps, 5V supply, DIP-8"
+			(property "Description" "High-Speed CAN Transceiver, 1Mbps, 5V supply, SPLIT pin, -40C to +125C, DIP-8"
 				(at 0 0 0)
 				(effects
 					(font
@@ -3552,7 +3428,7 @@
 					(hide yes)
 				)
 			)
-			(symbol "MCP2551-I-P_0_1"
+			(symbol "MCP2561-E-P_0_1"
 				(rectangle
 					(start -10.16 7.62)
 					(end 10.16 -7.62)
@@ -3565,7 +3441,7 @@
 					)
 				)
 			)
-			(symbol "MCP2551-I-P_1_1"
+			(symbol "MCP2561-E-P_1_1"
 				(pin input line
 					(at -12.7 5.08 0)
 					(length 2.54)
@@ -3602,28 +3478,10 @@
 						)
 					)
 				)
-				(pin power_out line
-					(at -12.7 -2.54 0)
-					(length 2.54)
-					(name "Vref"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
 				(pin input line
 					(at -12.7 -5.08 0)
 					(length 2.54)
-					(name "Rs"
+					(name "STBY"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3685,6 +3543,24 @@
 						)
 					)
 					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 12.7 0 180)
+					(length 2.54)
+					(name "SPLIT"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -7006,16 +6882,6 @@
 		)
 		(uuid "f2a378a9-bfea-42fb-8d2f-722ac9d8a20d")
 	)
-	(text "Replace with MCP2561\nTX and RX connect to ESP\nCheck 5V output from TX and RX"
-		(exclude_from_sim no)
-		(at 227.584 94.234 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "f85f39e4-091d-43f7-a3fa-2a727c9003ae")
-	)
 	(text "MCP2551 Example Circuit\n"
 		(exclude_from_sim no)
 		(at 179.578 97.536 0)
@@ -7114,12 +6980,6 @@
 		(uuid "8b12a114-598c-4290-9b96-5a08765e654c")
 	)
 	(junction
-		(at 204.47 87.63)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "8bb61411-3511-458c-98ec-ec5374cdfbad")
-	)
-	(junction
 		(at 105.41 111.76)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -7198,6 +7058,12 @@
 		(uuid "c3654600-a16e-453f-9406-c8ab4499ee1b")
 	)
 	(junction
+		(at 200.66 85.09)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "cfa68ed5-0fd4-4fc2-bffd-3b398e05eae4")
+	)
+	(junction
 		(at 105.41 78.74)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -7208,6 +7074,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "d819da19-4852-426f-a4f0-292cc155f15c")
+	)
+	(junction
+		(at 223.52 72.39)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d8880561-cfe5-4879-a016-b28649bba18e")
 	)
 	(junction
 		(at 250.19 44.45)
@@ -7228,8 +7100,8 @@
 		(uuid "fb54dd76-76bb-4038-9e01-3c22982c29d8")
 	)
 	(no_connect
-		(at 191.77 77.47)
-		(uuid "71de1980-868c-418a-aa42-087f4f559930")
+		(at 213.36 73.66)
+		(uuid "4a852d2c-30fc-4a82-8558-c5c81dc98d3d")
 	)
 	(wire
 		(pts
@@ -7270,6 +7142,16 @@
 			(type default)
 		)
 		(uuid "03bfeb9f-f984-4d4d-a291-d1062d14b615")
+	)
+	(wire
+		(pts
+			(xy 200.66 85.09) (xy 200.66 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "04580c86-5ce9-4cd2-8695-2c75507b334f")
 	)
 	(wire
 		(pts
@@ -7400,16 +7282,6 @@
 			(type default)
 		)
 		(uuid "16c63bea-7996-4b2c-ae42-8234cd630307")
-	)
-	(wire
-		(pts
-			(xy 191.77 80.01) (xy 190.5 80.01)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1b9ada88-29a7-4414-9b34-ca765429b87d")
 	)
 	(wire
 		(pts
@@ -7663,6 +7535,16 @@
 	)
 	(wire
 		(pts
+			(xy 223.52 62.23) (xy 223.52 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "42c37662-8441-4fe4-8d73-d546356d3816")
+	)
+	(wire
+		(pts
 			(xy 223.52 22.86) (xy 223.52 25.4)
 		)
 		(stroke
@@ -7680,6 +7562,16 @@
 			(type default)
 		)
 		(uuid "4436ab1b-f75e-4cf4-bb5e-823a9cce34fa")
+	)
+	(wire
+		(pts
+			(xy 223.52 68.58) (xy 223.52 72.39)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "45534ab5-41cf-465a-84e3-413d8ac703d4")
 	)
 	(wire
 		(pts
@@ -7750,6 +7642,16 @@
 			(type default)
 		)
 		(uuid "529c42d3-cd4a-412a-a613-7ea7c76f08e0")
+	)
+	(wire
+		(pts
+			(xy 223.52 72.39) (xy 223.52 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "53481eda-a77d-40bc-b53f-8e86cb6a6a90")
 	)
 	(wire
 		(pts
@@ -8070,6 +7972,16 @@
 			(type default)
 		)
 		(uuid "82444abe-bf00-423e-aff0-7e9aaacc1480")
+	)
+	(wire
+		(pts
+			(xy 200.66 83.82) (xy 200.66 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "86eddbbd-3e33-45b0-943f-7cbd48b1506f")
 	)
 	(wire
 		(pts
@@ -8433,16 +8345,6 @@
 	)
 	(wire
 		(pts
-			(xy 190.5 87.63) (xy 204.47 87.63)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c779c37a-fba9-4c37-949d-ec5847a79e83")
-	)
-	(wire
-		(pts
 			(xy 201.93 44.45) (xy 191.77 44.45)
 		)
 		(stroke
@@ -8500,16 +8402,6 @@
 			(type default)
 		)
 		(uuid "d6db937b-52ff-4bbf-997c-1b6079910551")
-	)
-	(wire
-		(pts
-			(xy 204.47 85.09) (xy 204.47 87.63)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d8bd551e-0934-465c-a2df-f8d1e94240a7")
 	)
 	(wire
 		(pts
@@ -8593,6 +8485,16 @@
 	)
 	(wire
 		(pts
+			(xy 223.52 72.39) (xy 227.33 72.39)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "eef7a49f-cd3c-4f2b-8570-7c9c839dcfd4")
+	)
+	(wire
+		(pts
 			(xy 191.77 22.86) (xy 191.77 25.4)
 		)
 		(stroke
@@ -8643,6 +8545,16 @@
 	)
 	(wire
 		(pts
+			(xy 187.96 85.09) (xy 200.66 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f2ef22b8-a0ca-4b1e-8801-24270a0e1709")
+	)
+	(wire
+		(pts
 			(xy 105.41 68.58) (xy 105.41 69.85)
 		)
 		(stroke
@@ -8683,16 +8595,6 @@
 	)
 	(wire
 		(pts
-			(xy 204.47 87.63) (xy 204.47 88.9)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "fbce43c9-60a4-42a0-9242-b8f7dd2d87d5")
-	)
-	(wire
-		(pts
 			(xy 21.59 179.07) (xy 33.02 179.07)
 		)
 		(stroke
@@ -8713,16 +8615,6 @@
 	)
 	(wire
 		(pts
-			(xy 204.47 62.23) (xy 204.47 64.77)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "fda538c8-97bd-4e78-8c12-7e7a0c25f9eb")
-	)
-	(wire
-		(pts
 			(xy 191.77 156.21) (xy 186.69 156.21)
 		)
 		(stroke
@@ -8731,8 +8623,18 @@
 		)
 		(uuid "fe4dfc1e-5147-4754-88e2-e4d3615ea3c5")
 	)
+	(wire
+		(pts
+			(xy 187.96 78.74) (xy 187.96 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "feb9c052-bd9b-4b85-918c-779bc428a70c")
+	)
 	(label "IDLE"
-		(at 120.65 34.29 180)
+		(at 120.65 31.75 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8750,6 +8652,16 @@
 			(justify right bottom)
 		)
 		(uuid "019d0b28-98e2-44e1-9ae2-1ea0dbeb9aed")
+	)
+	(label "CAN-RX-OUT"
+		(at 120.65 34.29 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "08ef2762-87ac-4e2b-b7b4-8559028b2acc")
 	)
 	(label "TPS-GND2"
 		(at 132.08 124.46 180)
@@ -8781,6 +8693,16 @@
 			(justify right bottom)
 		)
 		(uuid "0ca43e88-3ee2-45e5-8aff-56b353b080df")
+	)
+	(label "CAN-RX"
+		(at 223.52 62.23 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "0cb958f8-e09e-4df5-8d39-721183a1e5fe")
 	)
 	(label "TPS-SIG1-OUT"
 		(at 160.02 111.76 0)
@@ -8913,7 +8835,7 @@
 		(uuid "316f4f6a-e91e-4410-bbbd-7275068cbfe8")
 	)
 	(label "APPS-SIG2-OUT"
-		(at 149.86 41.91 0)
+		(at 149.86 44.45 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8983,15 +8905,15 @@
 		)
 		(uuid "4173fd27-feb0-43f1-8256-c447c6f89bd9")
 	)
-	(label "CAN_RX"
-		(at 191.77 72.39 180)
+	(label "CAN-TX"
+		(at 187.96 68.58 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify right bottom)
 		)
-		(uuid "46c49ed3-0af5-4cf3-9718-c6525ab81bc5")
+		(uuid "44f1d29e-2311-4b24-a2c0-ba62c3318b2c")
 	)
 	(label "ENABLE"
 		(at 217.17 115.57 0)
@@ -9033,16 +8955,6 @@
 		)
 		(uuid "5806b2b4-ac5e-421d-9c6c-5229d1fa4b40")
 	)
-	(label "CAN_TX"
-		(at 191.77 69.85 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "58cc9291-777c-40d3-917c-64215571b9b4")
-	)
 	(label "SPI-MISO"
 		(at 129.54 179.07 180)
 		(effects
@@ -9054,13 +8966,13 @@
 		(uuid "607e996a-a9c0-4241-ab5c-b6ba31f928ff")
 	)
 	(label "BLIP-OUT"
-		(at 120.65 36.83 180)
+		(at 149.86 36.83 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 				(thickness 0.1588)
 			)
-			(justify right bottom)
+			(justify left bottom)
 		)
 		(uuid "65c15a52-080b-4294-9b27-ae6efe1f2190")
 	)
@@ -9093,6 +9005,16 @@
 			(justify left bottom)
 		)
 		(uuid "6c0b984d-6b3d-42b6-9213-33ada4711072")
+	)
+	(label "CAN-RX"
+		(at 187.96 71.12 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "7071e2af-f1b9-453e-9965-c71aa3bc3e75")
 	)
 	(label "ESP_HEARTBEAT_L2"
 		(at 149.86 34.29 0)
@@ -9164,16 +9086,6 @@
 		)
 		(uuid "92674468-d0a9-4284-9bda-365de6bf1d4c")
 	)
-	(label "CAN-H"
-		(at 217.17 72.39 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "95efece9-339c-42cd-9f32-824da684b830")
-	)
 	(label "STEP-2+"
 		(at 262.89 115.57 180)
 		(effects
@@ -9193,6 +9105,16 @@
 			(justify right bottom)
 		)
 		(uuid "99289967-953a-4cab-bbc2-ad679fc59ce9")
+	)
+	(label "CAN-H"
+		(at 213.36 71.12 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "9d783629-5429-4a3f-98ee-5bfb6673c3dd")
 	)
 	(label "STEP-1-"
 		(at 262.89 113.03 180)
@@ -9233,6 +9155,16 @@
 			(justify right bottom)
 		)
 		(uuid "a8627c24-fac1-4b3e-8446-3c8d85efa9e6")
+	)
+	(label "CAN-RX-OUT"
+		(at 227.33 72.39 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "a9b911c3-e4cf-495d-928a-819a9fdd942f")
 	)
 	(label "CARD-DETECT"
 		(at 120.65 54.61 180)
@@ -9284,6 +9216,16 @@
 		)
 		(uuid "b78d9b43-0c0b-491f-a1c6-0892e47dc7ce")
 	)
+	(label "CAN-TX"
+		(at 120.65 36.83 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "b84a1f29-afe7-41cc-aea1-86f00cb14126")
+	)
 	(label "SPI-SCK"
 		(at 129.54 173.99 180)
 		(effects
@@ -9293,6 +9235,16 @@
 			(justify right bottom)
 		)
 		(uuid "bb6d6b23-a716-40de-ba05-e1aef98446db")
+	)
+	(label "CAN-L"
+		(at 213.36 76.2 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "bc5c50bf-9738-458d-8975-bf31625ce8ea")
 	)
 	(label "APPS-GND"
 		(at 144.78 83.82 180)
@@ -9306,7 +9258,7 @@
 		(uuid "bf017500-7e61-4569-aff7-05eb7369e269")
 	)
 	(label "TPS-SIG1-OUT"
-		(at 149.86 44.45 0)
+		(at 149.86 41.91 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9345,16 +9297,6 @@
 			(justify left bottom)
 		)
 		(uuid "c2321b86-5a67-4ee9-a8f1-0fb5ea6fac8c")
-	)
-	(label "CAN-L"
-		(at 217.17 77.47 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "c31f52f5-8620-486d-856c-ca7b858f185c")
 	)
 	(label "CARD-CS"
 		(at 120.65 46.99 180)
@@ -9591,76 +9533,6 @@
 			(project "E-throttle"
 				(path "/6e34869e-da06-4d64-b4b2-885b48fe3f81"
 					(reference "#PWR035")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 190.5 83.82 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "0299229e-0f82-4cc4-af22-3f24783e61f7")
-		(property "Reference" "R10"
-			(at 193.04 82.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "20k"
-			(at 193.04 85.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
-			(at 188.722 83.82 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 190.5 83.82 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 190.5 83.82 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "d81eb37b-c2df-4325-b2ce-08c78364c91a")
-		)
-		(pin "2"
-			(uuid "95f60ee4-0d64-4dc2-b224-1607ec46fec3")
-		)
-		(instances
-			(project "E-throttle"
-				(path "/6e34869e-da06-4d64-b4b2-885b48fe3f81"
-					(reference "R10")
 					(unit 1)
 				)
 			)
@@ -10808,95 +10680,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Interface_CAN_LIN:MCP2551-I-P")
-		(at 204.47 74.93 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "2f7690c2-e6bd-418b-95ae-9a39caecee54")
-		(property "Reference" "U4"
-			(at 206.6641 62.23 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "MCP2551-I-P"
-			(at 206.6641 64.77 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_DIP:DIP-8_W7.62mm"
-			(at 204.47 87.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "http://ww1.microchip.com/downloads/en/devicedoc/21667d.pdf"
-			(at 204.47 74.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 204.47 74.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "3a23507e-a0ae-4588-b9c1-52e546497c17")
-		)
-		(pin "2"
-			(uuid "274fc89f-f8ff-49e1-9117-a5b508aeb5f1")
-		)
-		(pin "3"
-			(uuid "cc414aea-01a5-4e41-bfbd-67ae6e1fe7f8")
-		)
-		(pin "4"
-			(uuid "90201c2b-7983-4f46-9b14-deb71a96e20a")
-		)
-		(pin "5"
-			(uuid "df9cf271-d572-4e89-8cac-02b8f1acd628")
-		)
-		(pin "6"
-			(uuid "813a8c97-22cf-45e8-80f7-3a6a1e1b45de")
-		)
-		(pin "7"
-			(uuid "82c94546-c5fe-44fb-8a17-610d4e2aa0d9")
-		)
-		(pin "8"
-			(uuid "885ebab7-b456-41a4-9da1-1850fedb2d12")
-		)
-		(instances
-			(project "E-throttle"
-				(path "/6e34869e-da06-4d64-b4b2-885b48fe3f81"
-					(reference "U4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R_Small")
 		(at 156.21 119.38 0)
 		(unit 1)
@@ -11849,17 +11632,17 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+5V")
-		(at 204.47 62.23 0)
+		(lib_id "power:GND")
+		(at 200.66 86.36 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "528fa8c9-80a4-412f-8250-ffaae611e20f")
-		(property "Reference" "#PWR021"
-			(at 204.47 66.04 0)
+		(uuid "502d0578-4ef7-4941-beee-b7c8f48984ee")
+		(property "Reference" "#PWR053"
+			(at 200.66 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11867,8 +11650,8 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+5V"
-			(at 204.47 57.15 0)
+		(property "Value" "GND"
+			(at 200.66 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11876,7 +11659,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 204.47 62.23 0)
+			(at 200.66 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11885,7 +11668,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 204.47 62.23 0)
+			(at 200.66 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11893,8 +11676,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
-			(at 204.47 62.23 0)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 200.66 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11903,12 +11686,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "58cef12e-ba1d-4b7c-919a-26881a699af5")
+			(uuid "170d523d-3b4e-4a02-9f19-f2c588e6cff1")
 		)
 		(instances
-			(project "E-throttle"
+			(project ""
 				(path "/6e34869e-da06-4d64-b4b2-885b48fe3f81"
-					(reference "#PWR021")
+					(reference "#PWR053")
 					(unit 1)
 				)
 			)
@@ -12258,6 +12041,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 223.52 82.55 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "5668a050-1db7-45e3-a0f7-eb15d84e841d")
+		(property "Reference" "#PWR052"
+			(at 223.52 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 223.52 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 223.52 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 223.52 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 223.52 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "42d545ab-0da1-49e0-a53a-e7d968d76070")
+		)
+		(instances
+			(project "E-throttle"
+				(path "/6e34869e-da06-4d64-b4b2-885b48fe3f81"
+					(reference "#PWR052")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R_Small")
 		(at 224.79 151.13 0)
 		(unit 1)
@@ -12532,6 +12381,76 @@
 			(project ""
 				(path "/6e34869e-da06-4d64-b4b2-885b48fe3f81"
 					(reference "R19")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Small")
+		(at 223.52 66.04 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "5f4e1ca0-0497-496f-9057-d4343de66c7b")
+		(property "Reference" "R25"
+			(at 226.06 64.7699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "33.2k"
+			(at 226.06 67.3099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+			(at 223.52 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 223.52 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor, small symbol"
+			(at 223.52 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "6db39241-adac-436b-933f-e8fdf9eb6009")
+		)
+		(pin "2"
+			(uuid "e3584232-0714-414b-acb9-3a5ab6d58abc")
+		)
+		(instances
+			(project "E-throttle"
+				(path "/6e34869e-da06-4d64-b4b2-885b48fe3f81"
+					(reference "R25")
 					(unit 1)
 				)
 			)
@@ -13003,6 +12922,72 @@
 			(project "E-throttle"
 				(path "/6e34869e-da06-4d64-b4b2-885b48fe3f81"
 					(reference "SW1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 200.66 63.5 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "6b36d6a0-a10b-4469-8678-859b8f010ef7")
+		(property "Reference" "#PWR037"
+			(at 200.66 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 200.66 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 200.66 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 200.66 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 200.66 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "91839d8d-af9e-46db-9810-da9a1753aac7")
+		)
+		(instances
+			(project ""
+				(path "/6e34869e-da06-4d64-b4b2-885b48fe3f81"
+					(reference "#PWR037")
 					(unit 1)
 				)
 			)
@@ -14149,6 +14134,76 @@
 			(project ""
 				(path "/6e34869e-da06-4d64-b4b2-885b48fe3f81"
 					(reference "#PWR01")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Small")
+		(at 223.52 80.01 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "8b36341d-cfad-4009-b349-8e3aaf5a76c5")
+		(property "Reference" "R26"
+			(at 226.06 78.7399 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "66.5k"
+			(at 226.06 81.2799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+			(at 223.52 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 223.52 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor, small symbol"
+			(at 223.52 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "802688c9-8a34-4fc6-acf8-01f2e59058aa")
+		)
+		(pin "2"
+			(uuid "67885695-60b3-4e3f-b05c-7a93a6495af4")
+		)
+		(instances
+			(project "E-throttle"
+				(path "/6e34869e-da06-4d64-b4b2-885b48fe3f81"
+					(reference "R26")
 					(unit 1)
 				)
 			)
@@ -15723,72 +15778,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 204.47 88.9 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "bd8847f9-5927-4809-b553-dd73cd788395")
-		(property "Reference" "#PWR022"
-			(at 204.47 95.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 204.47 93.98 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 204.47 88.9 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 204.47 88.9 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 204.47 88.9 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "3b150a69-a239-4803-93fd-13704f95d42a")
-		)
-		(instances
-			(project "E-throttle"
-				(path "/6e34869e-da06-4d64-b4b2-885b48fe3f81"
-					(reference "#PWR022")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:+3V3")
 		(at 119.38 165.1 0)
 		(unit 1)
@@ -16462,6 +16451,95 @@
 			(project ""
 				(path "/6e34869e-da06-4d64-b4b2-885b48fe3f81"
 					(reference "#PWR013")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Interface_CAN_LIN:MCP2561-E-P")
+		(at 200.66 73.66 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e85727ed-ec3b-4712-bd0b-d87902601824")
+		(property "Reference" "U7"
+			(at 202.8033 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MCP2561-E-P"
+			(at 202.8033 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_DIP:DIP-8_W7.62mm"
+			(at 200.66 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://ww1.microchip.com/downloads/en/DeviceDoc/25167A.pdf"
+			(at 200.66 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "High-Speed CAN Transceiver, 1Mbps, 5V supply, SPLIT pin, -40C to +125C, DIP-8"
+			(at 200.66 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "8"
+			(uuid "5c97bae3-0b55-47d2-b870-64a8da0f4fb0")
+		)
+		(pin "4"
+			(uuid "2300dc9e-56d0-41be-ba67-f8b130001974")
+		)
+		(pin "5"
+			(uuid "a0804194-3907-45a4-9046-501aff6a36c9")
+		)
+		(pin "6"
+			(uuid "905f30f1-717e-47f4-b718-81b5c5857433")
+		)
+		(pin "3"
+			(uuid "8046517b-eaab-4a19-85ef-8b8bed643ece")
+		)
+		(pin "2"
+			(uuid "8355ab05-8336-4636-8325-c05022a04593")
+		)
+		(pin "7"
+			(uuid "2b2c7aec-09c0-41e1-a3d5-1c0612c11399")
+		)
+		(pin "1"
+			(uuid "adf47600-3be2-4b3b-9234-d2fa8d0b4a39")
+		)
+		(instances
+			(project ""
+				(path "/6e34869e-da06-4d64-b4b2-885b48fe3f81"
+					(reference "U7")
 					(unit 1)
 				)
 			)
