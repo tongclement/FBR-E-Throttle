@@ -37,9 +37,9 @@
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
-          "drill": 0.0,
-          "height": 1.45,
-          "width": 1.0
+          "drill": 1.0,
+          "height": 1.7,
+          "width": 1.7
         },
         "silk_line_width": 0.1,
         "silk_text_italic": false,
@@ -58,7 +58,28 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        [
+          "unconnected_items|163180000|57820000|F.Cu|4|df257922-4ebd-488c-ac9f-dd6ac685bdcc|8ec7f437-cfa0-49af-95c9-8af5c33dd682",
+          ""
+        ],
+        [
+          "unconnected_items|211820000|57820000|F.Cu|4|37dd0d35-81af-4e0f-ab08-92b4b5da4d05|828b0daf-3bd8-4041-a4a6-d0fe79f59684",
+          ""
+        ],
+        [
+          "unconnected_items|215046000|51646000|F.Cu|4|b7086c74-0877-48b1-a021-abe47f729667|bf5785f8-61d7-487f-90b2-a9eefb7eda72",
+          ""
+        ],
+        [
+          "unconnected_items|216520000|73620000|F.Cu|4|b037dd06-76da-4028-a438-a28bd03eecaa|39a4e11f-567c-4d35-b448-dd62358426b7",
+          ""
+        ],
+        [
+          "unconnected_items|229680000|117460000|F.Cu|4|8d4070a1-81a7-4cb1-8c5f-83827180d08b|cad07315-4cc7-43de-ba66-2d1b0b097878",
+          ""
+        ]
+      ],
       "meta": {
         "version": 2
       },
