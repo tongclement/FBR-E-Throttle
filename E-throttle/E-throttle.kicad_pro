@@ -60,14 +60,6 @@
       ],
       "drc_exclusions": [
         [
-          "unconnected_items|163180000|57820000|F.Cu|4|df257922-4ebd-488c-ac9f-dd6ac685bdcc|8ec7f437-cfa0-49af-95c9-8af5c33dd682",
-          ""
-        ],
-        [
-          "unconnected_items|211820000|57820000|F.Cu|4|37dd0d35-81af-4e0f-ab08-92b4b5da4d05|828b0daf-3bd8-4041-a4a6-d0fe79f59684",
-          ""
-        ],
-        [
           "unconnected_items|215046000|51646000|F.Cu|4|b7086c74-0877-48b1-a021-abe47f729667|bf5785f8-61d7-487f-90b2-a9eefb7eda72",
           ""
         ],
