@@ -5444,6 +5444,146 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Regulator_Linear:TLV1117-33"
+			(pin_names
+				(offset 0.254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "U"
+				(at -3.81 3.175 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "TLV1117-33"
+				(at 0 3.175 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "http://www.ti.com/lit/ds/symlink/tlv1117.pdf"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "800mA Low-Dropout Linear Regulator, 3.3V fixed output, TO-220/TO-252/TO-263/SOT-223"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "linear regulator ldo fixed positive"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "SOT?223* TO?263* TO?252* TO?220*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "TLV1117-33_0_1"
+				(rectangle
+					(start -5.08 -5.08)
+					(end 5.08 1.905)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "TLV1117-33_1_1"
+				(pin power_in line
+					(at -7.62 0 0)
+					(length 2.54)
+					(name "VI"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 -7.62 90)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_out line
+					(at 7.62 0 180)
+					(length 2.54)
+					(name "VO"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Regulator_Switching:R-78E5.0-0.5"
 			(pin_names
 				(offset 0.254)
@@ -12554,7 +12694,7 @@
 			(uuid "678f5b72-0e49-4eff-a7db-a06900b6954f")
 		)
 		(instances
-			(project ""
+			(project "E-throttle"
 				(path "/6e34869e-da06-4d64-b4b2-885b48fe3f81"
 					(reference "J1")
 					(unit 1)
@@ -13146,6 +13286,77 @@
 		)
 	)
 	(symbol
+		(lib_id "Regulator_Linear:TLV1117-33")
+		(at 246.38 24.13 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2caeea1d-2277-4a64-987a-98eb65ce3084")
+		(property "Reference" "U3"
+			(at 246.38 17.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TLV1117-33"
+			(at 246.38 20.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:TO-252-3_TabPin2"
+			(at 246.38 24.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/tlv1117.pdf"
+			(at 246.38 24.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "800mA Low-Dropout Linear Regulator, 3.3V fixed output, TO-220/TO-252/TO-263/SOT-223"
+			(at 246.38 24.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e44e3aad-a8de-4a87-943e-9a266e1cf993")
+		)
+		(pin "2"
+			(uuid "cc73c8ad-e5cc-4f9b-879c-9a7243587a64")
+		)
+		(pin "3"
+			(uuid "5ff872df-1f3e-4fbf-bda1-dcca59888399")
+		)
+		(instances
+			(project "E-throttle"
+				(path "/6e34869e-da06-4d64-b4b2-885b48fe3f81"
+					(reference "U3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 91.44 186.69 0)
 		(unit 1)
@@ -13500,7 +13711,7 @@
 				)
 			)
 		)
-		(property "Value" "R-78E5.0-0.5"
+		(property "Value" "R-78E5.0-1.0"
 			(at 264.16 58.42 0)
 			(effects
 				(font
@@ -13877,7 +14088,7 @@
 			(uuid "2383cd59-ac26-4237-8036-8c4f9ea2d21e")
 		)
 		(instances
-			(project ""
+			(project "E-throttle"
 				(path "/6e34869e-da06-4d64-b4b2-885b48fe3f81"
 					(reference "J2")
 					(unit 1)
@@ -15176,78 +15387,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Regulator_Linear:LM317_SOT-223")
-		(at 246.38 24.13 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "5623f379-1500-48ee-b92e-0dff4e53697d")
-		(property "Reference" "U3"
-			(at 246.38 17.78 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "LM317_SOT-223"
-			(at 246.38 20.32 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-223-3_TabPin2"
-			(at 246.38 17.78 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/lm317.pdf"
-			(at 246.38 24.13 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "1.5A 35V Adjustable Linear Regulator, SOT-223"
-			(at 246.38 24.13 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "3"
-			(uuid "7c218332-2507-44ef-9e61-7139bf95f9ac")
-		)
-		(pin "2"
-			(uuid "b6c8de92-a0ee-4f6c-bca1-a2295a62e751")
-		)
-		(pin "1"
-			(uuid "b7b016b9-1fd7-4e2f-a186-8ea5f0949529")
-		)
-		(instances
-			(project "E-throttle"
-				(path "/6e34869e-da06-4d64-b4b2-885b48fe3f81"
-					(reference "U3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 100.33 182.88 0)
 		(unit 1)
@@ -15443,7 +15582,7 @@
 			(uuid "980344c7-2d40-4df7-a1b3-04c3edb4e350")
 		)
 		(instances
-			(project ""
+			(project "E-throttle"
 				(path "/6e34869e-da06-4d64-b4b2-885b48fe3f81"
 					(reference "C12")
 					(unit 1)
@@ -17209,7 +17348,7 @@
 			(uuid "ef995712-c380-4fa1-83d7-66309116c3b1")
 		)
 		(instances
-			(project ""
+			(project "E-throttle"
 				(path "/6e34869e-da06-4d64-b4b2-885b48fe3f81"
 					(reference "C15")
 					(unit 1)
@@ -17572,7 +17711,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "240"
+		(property "Value" "220"
 			(at 200.66 30.4799 0)
 			(effects
 				(font
@@ -17684,7 +17823,7 @@
 			(uuid "91408b1c-af0e-4fa3-b14d-223cff3d5c12")
 		)
 		(instances
-			(project ""
+			(project "E-throttle"
 				(path "/6e34869e-da06-4d64-b4b2-885b48fe3f81"
 					(reference "C14")
 					(unit 1)
@@ -17699,7 +17838,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp yes)
+		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "961b004a-1edf-467c-889d-0bbcbd37d191")
 		(property "Reference" "U8"
@@ -18242,7 +18381,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "715"
+		(property "Value" "665"
 			(at 190.5 40.6399 0)
 			(effects
 				(font
@@ -18764,7 +18903,7 @@
 			(uuid "e36dc0e6-6f1a-4ced-9c49-3204318af596")
 		)
 		(instances
-			(project ""
+			(project "E-throttle"
 				(path "/6e34869e-da06-4d64-b4b2-885b48fe3f81"
 					(reference "C13")
 					(unit 1)
@@ -18943,7 +19082,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "240"
+		(property "Value" "220"
 			(at 259.08 30.4799 0)
 			(effects
 				(font
@@ -19687,7 +19826,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "392"
+		(property "Value" "360"
 			(at 248.92 40.6399 0)
 			(effects
 				(font
@@ -19939,7 +20078,7 @@
 			(uuid "9e58ff74-dcc7-4415-a7eb-eab47d1b3c58")
 		)
 		(instances
-			(project ""
+			(project "E-throttle"
 				(path "/6e34869e-da06-4d64-b4b2-885b48fe3f81"
 					(reference "#PWR037")
 					(unit 1)
