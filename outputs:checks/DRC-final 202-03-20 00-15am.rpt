@@ -1,0 +1,186 @@
+** Drc report for E-throttle.kicad_pcb **
+** Created on 2026-03-20T00:15:57+0000 **
+
+** Found 43 DRC violations **
+[shorting_items]: Items shorting two nets (nets unconnected-(J1-Pin_2-Pad2) and unconnected-(U5-GND-Pad17))
+    Local override; error
+    @(213.1925 mm, 122.2998 mm): PTH pad 2 [unconnected-(J1-Pin_2-Pad2)] of J1
+    @(213.1925 mm, 122.2998 mm): Track [unconnected-(U5-GND-Pad17)] on F.Cu, length 0.5074 mm
+[shorting_items]: Items shorting two nets (nets unconnected-(J1-Pin_2-Pad2) and unconnected-(U5-GND-Pad17))
+    Local override; error
+    @(213.1925 mm, 122.2998 mm): PTH pad 2 [unconnected-(J1-Pin_2-Pad2)] of J1
+    @(213.6998 mm, 122.2998 mm): Track [unconnected-(U5-GND-Pad17)] on F.Cu, length 0.0285 mm
+[shorting_items]: Items shorting two nets (nets unconnected-(U5-D12-Pad4) and unconnected-(J2-Pin_4-Pad4))
+    Local override; error
+    @(187.7925 mm, 117.2198 mm): PTH pad 4 [unconnected-(U5-D12-Pad4)] of U5
+    @(187.7925 mm, 117.2198 mm): PTH pad 4 [unconnected-(J2-Pin_4-Pad4)] of J2
+[shorting_items]: Items shorting two nets (nets unconnected-(U5-D35-Pad11) and unconnected-(J2-Pin_11-Pad11))
+    Local override; error
+    @(187.7925 mm, 99.4398 mm): PTH pad 11 [unconnected-(U5-D35-Pad11)] of U5
+    @(187.7925 mm, 99.4398 mm): PTH pad 11 [unconnected-(J2-Pin_11-Pad11)] of J2
+[shorting_items]: Items shorting two nets (nets unconnected-(U5-VN-Pad13) and unconnected-(J2-Pin_13-Pad13))
+    Local override; error
+    @(187.7925 mm, 94.3598 mm): PTH pad 13 [unconnected-(U5-VN-Pad13)] of U5
+    @(187.7925 mm, 94.3598 mm): PTH pad 13 [unconnected-(J2-Pin_13-Pad13)] of J2
+[shorting_items]: Items shorting two nets (nets unconnected-(U5-VP-Pad14) and unconnected-(J2-Pin_14-Pad14))
+    Local override; error
+    @(187.7925 mm, 91.8198 mm): PTH pad 14 [unconnected-(U5-VP-Pad14)] of U5
+    @(187.7925 mm, 91.8198 mm): PTH pad 14 [unconnected-(J2-Pin_14-Pad14)] of J2
+[shorting_items]: Items shorting two nets (nets unconnected-(U5-EN-Pad15) and unconnected-(J2-Pin_15-Pad15))
+    Local override; error
+    @(187.7925 mm, 89.2798 mm): PTH pad 15 [unconnected-(U5-EN-Pad15)] of U5
+    @(187.7925 mm, 89.2798 mm): PTH pad 15 [unconnected-(J2-Pin_15-Pad15)] of J2
+[shorting_items]: Items shorting two nets (nets unconnected-(U5-3V3-Pad16) and unconnected-(J1-Pin_1-Pad1))
+    Local override; error
+    @(213.1925 mm, 124.8398 mm): PTH pad 16 [unconnected-(U5-3V3-Pad16)] of U5
+    @(213.1925 mm, 124.8398 mm): PTH pad 1 [unconnected-(J1-Pin_1-Pad1)] of J1
+[shorting_items]: Items shorting two nets (nets unconnected-(U5-GND-Pad17) and unconnected-(J1-Pin_2-Pad2))
+    Local override; error
+    @(213.1925 mm, 122.2998 mm): PTH pad 17 [unconnected-(U5-GND-Pad17)] of U5
+    @(213.1925 mm, 122.2998 mm): PTH pad 2 [unconnected-(J1-Pin_2-Pad2)] of J1
+[shorting_items]: Items shorting two nets (nets unconnected-(U5-D15-Pad18) and unconnected-(J1-Pin_3-Pad3))
+    Local override; error
+    @(213.1925 mm, 119.7598 mm): PTH pad 18 [unconnected-(U5-D15-Pad18)] of U5
+    @(213.1925 mm, 119.7598 mm): PTH pad 3 [unconnected-(J1-Pin_3-Pad3)] of J1
+[shorting_items]: Items shorting two nets (nets unconnected-(U5-D2-Pad19) and unconnected-(J1-Pin_4-Pad4))
+    Local override; error
+    @(213.1925 mm, 117.2198 mm): PTH pad 19 [unconnected-(U5-D2-Pad19)] of U5
+    @(213.1925 mm, 117.2198 mm): PTH pad 4 [unconnected-(J1-Pin_4-Pad4)] of J1
+[shorting_items]: Items shorting two nets (nets unconnected-(U5-D4-Pad20) and unconnected-(J1-Pin_5-Pad5))
+    Local override; error
+    @(213.1925 mm, 114.6798 mm): PTH pad 20 [unconnected-(U5-D4-Pad20)] of U5
+    @(213.1925 mm, 114.6798 mm): PTH pad 5 [unconnected-(J1-Pin_5-Pad5)] of J1
+[shorting_items]: Items shorting two nets (nets unconnected-(U5-RX0-Pad27) and unconnected-(J1-Pin_12-Pad12))
+    Local override; error
+    @(213.1925 mm, 96.8998 mm): PTH pad 27 [unconnected-(U5-RX0-Pad27)] of U5
+    @(213.1925 mm, 96.8998 mm): PTH pad 12 [unconnected-(J1-Pin_12-Pad12)] of J1
+[shorting_items]: Items shorting two nets (nets unconnected-(U5-TX0-Pad28) and unconnected-(J1-Pin_13-Pad13))
+    Local override; error
+    @(213.1925 mm, 94.3598 mm): PTH pad 28 [unconnected-(U5-TX0-Pad28)] of U5
+    @(213.1925 mm, 94.3598 mm): PTH pad 13 [unconnected-(J1-Pin_13-Pad13)] of J1
+[shorting_items]: Items shorting two nets (nets unconnected-(U5-D22{slash}SCL-Pad29) and unconnected-(J1-Pin_14-Pad14))
+    Local override; error
+    @(213.1925 mm, 91.8198 mm): PTH pad 29 [unconnected-(U5-D22/SCL-Pad29)] of U5
+    @(213.1925 mm, 91.8198 mm): PTH pad 14 [unconnected-(J1-Pin_14-Pad14)] of J1
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(213.1925 mm, 122.2998 mm): Track [unconnected-(U5-GND-Pad17)] on F.Cu, length 0.5074 mm
+    @(213.1925 mm, 122.2998 mm): PTH pad 2 [unconnected-(J1-Pin_2-Pad2)] of J1
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(213.6998 mm, 122.2998 mm): Track [unconnected-(U5-GND-Pad17)] on F.Cu, length 0.0285 mm
+    @(213.1925 mm, 122.2998 mm): PTH pad 2 [unconnected-(J1-Pin_2-Pad2)] of J1
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(187.7925 mm, 117.2198 mm): PTH pad 4 [unconnected-(U5-D12-Pad4)] of U5
+    @(187.7925 mm, 117.2198 mm): PTH pad 4 [unconnected-(J2-Pin_4-Pad4)] of J2
+[solder_mask_bridge]: Rear solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(187.7925 mm, 117.2198 mm): PTH pad 4 [unconnected-(U5-D12-Pad4)] of U5
+    @(187.7925 mm, 117.2198 mm): PTH pad 4 [unconnected-(J2-Pin_4-Pad4)] of J2
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(187.7925 mm, 99.4398 mm): PTH pad 11 [unconnected-(U5-D35-Pad11)] of U5
+    @(187.7925 mm, 99.4398 mm): PTH pad 11 [unconnected-(J2-Pin_11-Pad11)] of J2
+[solder_mask_bridge]: Rear solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(187.7925 mm, 99.4398 mm): PTH pad 11 [unconnected-(U5-D35-Pad11)] of U5
+    @(187.7925 mm, 99.4398 mm): PTH pad 11 [unconnected-(J2-Pin_11-Pad11)] of J2
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(187.7925 mm, 94.3598 mm): PTH pad 13 [unconnected-(U5-VN-Pad13)] of U5
+    @(187.7925 mm, 94.3598 mm): PTH pad 13 [unconnected-(J2-Pin_13-Pad13)] of J2
+[solder_mask_bridge]: Rear solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(187.7925 mm, 94.3598 mm): PTH pad 13 [unconnected-(U5-VN-Pad13)] of U5
+    @(187.7925 mm, 94.3598 mm): PTH pad 13 [unconnected-(J2-Pin_13-Pad13)] of J2
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(187.7925 mm, 91.8198 mm): PTH pad 14 [unconnected-(U5-VP-Pad14)] of U5
+    @(187.7925 mm, 91.8198 mm): PTH pad 14 [unconnected-(J2-Pin_14-Pad14)] of J2
+[solder_mask_bridge]: Rear solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(187.7925 mm, 91.8198 mm): PTH pad 14 [unconnected-(U5-VP-Pad14)] of U5
+    @(187.7925 mm, 91.8198 mm): PTH pad 14 [unconnected-(J2-Pin_14-Pad14)] of J2
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(187.7925 mm, 89.2798 mm): PTH pad 15 [unconnected-(U5-EN-Pad15)] of U5
+    @(187.7925 mm, 89.2798 mm): PTH pad 15 [unconnected-(J2-Pin_15-Pad15)] of J2
+[solder_mask_bridge]: Rear solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(187.7925 mm, 89.2798 mm): PTH pad 15 [unconnected-(U5-EN-Pad15)] of U5
+    @(187.7925 mm, 89.2798 mm): PTH pad 15 [unconnected-(J2-Pin_15-Pad15)] of J2
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(213.1925 mm, 124.8398 mm): PTH pad 16 [unconnected-(U5-3V3-Pad16)] of U5
+    @(213.1925 mm, 124.8398 mm): PTH pad 1 [unconnected-(J1-Pin_1-Pad1)] of J1
+[solder_mask_bridge]: Rear solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(213.1925 mm, 124.8398 mm): PTH pad 16 [unconnected-(U5-3V3-Pad16)] of U5
+    @(213.1925 mm, 124.8398 mm): PTH pad 1 [unconnected-(J1-Pin_1-Pad1)] of J1
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(213.1925 mm, 122.2998 mm): PTH pad 17 [unconnected-(U5-GND-Pad17)] of U5
+    @(213.1925 mm, 122.2998 mm): PTH pad 2 [unconnected-(J1-Pin_2-Pad2)] of J1
+[solder_mask_bridge]: Rear solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(213.1925 mm, 122.2998 mm): PTH pad 17 [unconnected-(U5-GND-Pad17)] of U5
+    @(213.1925 mm, 122.2998 mm): PTH pad 2 [unconnected-(J1-Pin_2-Pad2)] of J1
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(213.1925 mm, 119.7598 mm): PTH pad 18 [unconnected-(U5-D15-Pad18)] of U5
+    @(213.1925 mm, 119.7598 mm): PTH pad 3 [unconnected-(J1-Pin_3-Pad3)] of J1
+[solder_mask_bridge]: Rear solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(213.1925 mm, 119.7598 mm): PTH pad 18 [unconnected-(U5-D15-Pad18)] of U5
+    @(213.1925 mm, 119.7598 mm): PTH pad 3 [unconnected-(J1-Pin_3-Pad3)] of J1
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(213.1925 mm, 117.2198 mm): PTH pad 19 [unconnected-(U5-D2-Pad19)] of U5
+    @(213.1925 mm, 117.2198 mm): PTH pad 4 [unconnected-(J1-Pin_4-Pad4)] of J1
+[solder_mask_bridge]: Rear solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(213.1925 mm, 117.2198 mm): PTH pad 19 [unconnected-(U5-D2-Pad19)] of U5
+    @(213.1925 mm, 117.2198 mm): PTH pad 4 [unconnected-(J1-Pin_4-Pad4)] of J1
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(213.1925 mm, 114.6798 mm): PTH pad 20 [unconnected-(U5-D4-Pad20)] of U5
+    @(213.1925 mm, 114.6798 mm): PTH pad 5 [unconnected-(J1-Pin_5-Pad5)] of J1
+[solder_mask_bridge]: Rear solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(213.1925 mm, 114.6798 mm): PTH pad 20 [unconnected-(U5-D4-Pad20)] of U5
+    @(213.1925 mm, 114.6798 mm): PTH pad 5 [unconnected-(J1-Pin_5-Pad5)] of J1
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(213.1925 mm, 96.8998 mm): PTH pad 27 [unconnected-(U5-RX0-Pad27)] of U5
+    @(213.1925 mm, 96.8998 mm): PTH pad 12 [unconnected-(J1-Pin_12-Pad12)] of J1
+[solder_mask_bridge]: Rear solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(213.1925 mm, 96.8998 mm): PTH pad 27 [unconnected-(U5-RX0-Pad27)] of U5
+    @(213.1925 mm, 96.8998 mm): PTH pad 12 [unconnected-(J1-Pin_12-Pad12)] of J1
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(213.1925 mm, 94.3598 mm): PTH pad 28 [unconnected-(U5-TX0-Pad28)] of U5
+    @(213.1925 mm, 94.3598 mm): PTH pad 13 [unconnected-(J1-Pin_13-Pad13)] of J1
+[solder_mask_bridge]: Rear solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(213.1925 mm, 94.3598 mm): PTH pad 28 [unconnected-(U5-TX0-Pad28)] of U5
+    @(213.1925 mm, 94.3598 mm): PTH pad 13 [unconnected-(J1-Pin_13-Pad13)] of J1
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(213.1925 mm, 91.8198 mm): PTH pad 29 [unconnected-(U5-D22/SCL-Pad29)] of U5
+    @(213.1925 mm, 91.8198 mm): PTH pad 14 [unconnected-(J1-Pin_14-Pad14)] of J1
+[solder_mask_bridge]: Rear solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(213.1925 mm, 91.8198 mm): PTH pad 29 [unconnected-(U5-D22/SCL-Pad29)] of U5
+    @(213.1925 mm, 91.8198 mm): PTH pad 14 [unconnected-(J1-Pin_14-Pad14)] of J1
+
+** Found 1 unconnected pads **
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(217.3000 mm, 69.8200 mm): Track [+3V3] on F.Cu, length 2.7153 mm
+    @(211.4200 mm, 73.6200 mm): Track [+3V3] on F.Cu, length 5.1000 mm
+
+** Found 0 Footprint errors **
+
+** End of Report **
