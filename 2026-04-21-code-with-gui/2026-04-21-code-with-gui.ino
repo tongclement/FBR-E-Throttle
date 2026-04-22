@@ -2,22 +2,14 @@
 #include <WiFi.h>
 #include <AsyncTCP.h>
 #include <ESPAsyncWebServer.h>
-#include <TMC5160.h>
-#include <TMC5160_registers.h>
-
-// Safe placement: Define these AFTER all system headers are loaded
-#ifndef min
-#define min(a,b) ((a)<(b)?(a):(b))
-#endif
-#ifndef max
-#define max(a,b) ((a)>(b)?(a):(b))
-#endif
+// #include <TMC5160.h>
+// #include <TMC5160_registers.h>
 
 #define MS_TICKS(x) ((x) / portTICK_PERIOD_MS)
 
 // --- WiFi Credentials ---
 const char* ssid = "ESP32_Throttle_Tuner";
-const char* password = "password123"; // Make sure your phone/laptop uses this to connect
+const char* password = "password123";
 
 // --- Web Server & Socket ---
 AsyncWebServer server(80);
@@ -25,9 +17,9 @@ AsyncWebSocket ws("/ws");
 
 // --- Hardware Pins ---
 const uint8_t SPI_CS = 5;
-const int PEDAL_PIN = 34;      // APPS sensor pin
-const int PEDAL_2_PIN = 33;    // APPS2 sensor pin (Currently unused in logic)
-const int THROTTLE_PIN = 32;   // TPPS sensor pin
+const int PEDAL_PIN = 34;      
+const int PEDAL_2_PIN = 33;    
+const int THROTTLE_PIN = 32;   
 const int HEARTBEAT_1_PIN = 14; 
 const int HEARTBEAT_2_PIN = 27;
 
@@ -36,7 +28,7 @@ volatile bool isAlive1 = true;
 volatile bool isAlive2 = true;
 float Kp = 10.0;
 
-// Shared variables for the web dashboard (Volatile because modified by Core 1, read by Core 0)
+// Shared variables for the web dashboard
 volatile float tel_target = 0;
 volatile float tel_throttle = 0;
 volatile float tel_error = 0;
@@ -44,13 +36,14 @@ volatile int tel_velocity = 0;
 volatile int tel_apps = 0;
 volatile int tel_tps = 0;
 
-TMC5160_SPI motor = TMC5160_SPI(SPI_CS);
+// Motor object disabled
+// TMC5160_SPI motor = TMC5160_SPI(SPI_CS);
 
 // --- HTML Dashboard (Stored in Program Memory) ---
 const char index_html[] PROGMEM = R"rawliteral(
 <!DOCTYPE HTML><html>
 <head>
-  <title>Drive-By-Wire Tuner</title>
+  <title>Drive-By-Wire Tuner (Motor Disabled)</title>
   <style>
     body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #0f111a; color: #fff; text-align: center; margin: 0; padding: 20px;}
     .grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; margin-bottom: 20px;}
@@ -73,7 +66,7 @@ const char index_html[] PROGMEM = R"rawliteral(
   <div class="grid">
     <div class="card"><h3>APPS Raw</h3><h2 id="apps">0</h2></div>
     <div class="card"><h3>TPS Raw</h3><h2 id="tps">0</h2></div>
-    <div class="card"><h3>Velocity</h3><h2 id="velocity">0</h2></div>
+    <div class="card"><h3>Simulated Vel</h3><h2 id="velocity">0</h2></div>
     <div class="card"><h3>Error</h3><h2 id="error" style="color: #ff5555;">0.0</h2></div>
   </div>
 
@@ -89,7 +82,6 @@ const char index_html[] PROGMEM = R"rawliteral(
     var gateway = `ws://${window.location.hostname}/ws`;
     var websocket;
     
-    // Graphing Variables (100 points at 10Hz = 10 seconds of data)
     const MAX_POINTS = 100;
     let targetHistory = new Array(MAX_POINTS).fill(0);
     let throttleHistory = new Array(MAX_POINTS).fill(0);
@@ -99,7 +91,6 @@ const char index_html[] PROGMEM = R"rawliteral(
     function drawGraph() {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       
-      // Draw grid lines
       ctx.strokeStyle = '#2a2e3f';
       ctx.lineWidth = 1;
       for(let i=0; i<5; i++) {
@@ -114,7 +105,6 @@ const char index_html[] PROGMEM = R"rawliteral(
         ctx.lineJoin = 'round';
         for(let i=0; i<dataArray.length; i++) {
           let x = (i / (MAX_POINTS - 1)) * canvas.width;
-          // Scale 0-200 to canvas height (inverted for standard graph orientation)
           let y = canvas.height - ((dataArray[i] / 200) * canvas.height);
           if(i === 0) ctx.moveTo(x, y);
           else ctx.lineTo(x, y);
@@ -122,8 +112,8 @@ const char index_html[] PROGMEM = R"rawliteral(
         ctx.stroke();
       }
 
-      plotLine(targetHistory, '#64ffda'); // Cyan line for Target
-      plotLine(throttleHistory, '#ffb86c'); // Orange line for Throttle
+      plotLine(targetHistory, '#64ffda'); 
+      plotLine(throttleHistory, '#ffb86c'); 
     }
 
     function initWebSocket() {
@@ -131,14 +121,12 @@ const char index_html[] PROGMEM = R"rawliteral(
       websocket.onmessage = function(event) {
         var data = JSON.parse(event.data);
         
-        // Update text cards
         document.getElementById('apps').innerText = data.apps;
         document.getElementById('tps').innerText = data.tps;
         document.getElementById('velocity').innerText = data.velocity;
         document.getElementById('error').innerText = data.error.toFixed(2);
         document.getElementById('kp').innerText = data.kp.toFixed(2);
 
-        // Update arrays and redraw graph
         targetHistory.push(data.target);
         throttleHistory.push(data.throttle);
         targetHistory.shift();
@@ -156,9 +144,12 @@ const char index_html[] PROGMEM = R"rawliteral(
 )rawliteral";
 
 // ---------------------------------------------------------
-// TASK 1: Stepper Motor Control (Core 1, Priority 1)
+// TASK 1: Sensor & Math Logic (Motor Hardware Bypassed)
 // ---------------------------------------------------------
 void StepperTask(void *pvParameters){
+  
+  // === MOTOR INITIALIZATION BYPASSED FOR TESTING ===
+  /*
   TMC5160::PowerStageParameters powerStageParams; 
   TMC5160::MotorParameters motorParams;
 
@@ -177,22 +168,28 @@ void StepperTask(void *pvParameters){
   motor.setRampMode(TMC5160::VELOCITY_MODE);
   motor.setMaxSpeed(1000);
   motor.setAcceleration(2000);
+  */
+  // ==================================================
 
   vTaskDelay(MS_TICKS(1000)); 
 
   TickType_t xTaskDelayTick = xTaskGetTickCount();
   
   while (true){
+    // 1. Read Sensors
     int raw = analogRead(PEDAL_PIN);
     float target = map(raw, 0, 2500, 0, 200); 
     
     int raw_throttle = analogRead(THROTTLE_PIN);
     float scaled_throttle = map(raw_throttle, 0, 4095, 0, 200);
     
+    // 2. Calculate Math
     float error = target - scaled_throttle;
     float velocity = Kp * error;
     int vel_int = constrain(abs(velocity), 0, 5000);
     
+    // === MOTOR ACTUATION BYPASSED FOR TESTING ===
+    /*
     if (velocity > 0) {
         motor.writeRegister(TMC5160_Reg::RAMPMODE, 1);
         motor.writeRegister(TMC5160_Reg::VMAX, vel_int);
@@ -200,8 +197,10 @@ void StepperTask(void *pvParameters){
         motor.writeRegister(TMC5160_Reg::RAMPMODE, 2);
         motor.writeRegister(TMC5160_Reg::VMAX, vel_int);
     }
+    */
+    // ============================================
 
-    // Update global variables for the WebSocket to read safely
+    // 3. Update global variables for the WebSocket
     tel_apps = raw;
     tel_tps = raw_throttle;
     tel_target = target;
@@ -235,7 +234,6 @@ void HeartbeatTask(void *pvParameters) {
 void WebTelemetryTask(void *pvParameters) {
   TickType_t xLastWakeTime = xTaskGetTickCount();
   while(true) {
-    // Only compile and send JSON if someone is actually looking at the webpage
     if(ws.count() > 0) {
       char payload[256];
       snprintf(payload, sizeof(payload), 
@@ -244,7 +242,6 @@ void WebTelemetryTask(void *pvParameters) {
       
       ws.textAll(payload);
     }
-    // Broadcast at ~10Hz
     vTaskDelayUntil(&xLastWakeTime, 100 / portTICK_PERIOD_MS);
   }
 }
@@ -257,15 +254,13 @@ void setup() {
   digitalWrite(HEARTBEAT_1_PIN, LOW);
   digitalWrite(HEARTBEAT_2_PIN, LOW);
 
-  // Set up ESP32 as a WiFi Access Point
-  Serial.println("\n--- System Boot ---");
+  Serial.println("\n--- System Boot (MOTOR DISABLED MODE) ---");
   Serial.println("Starting WiFi AP...");
   WiFi.softAP(ssid, password);
   Serial.print("Connect your device to WiFi network 'ESP32_Throttle_Tuner'");
   Serial.print("\nThen navigate your browser to: http://");
   Serial.println(WiFi.softAPIP());
 
-  // Set up Web Server
   server.on("/", HTTP_GET, [](AsyncWebServerRequest *request){
     request->send_P(200, "text/html", index_html);
   });
@@ -279,17 +274,12 @@ void setup() {
   Serial.println(" '+' = Increase Kp by 1.0");
   Serial.println(" '-' = Decrease Kp by 1.0");
 
-  // Create Tasks
-  // BOTH control tasks go to Core 1. Heartbeat gets priority 3, Stepper gets 1.
   xTaskCreatePinnedToCore((void(*)(void*))&HeartbeatTask, "Heartbeat", 2048, NULL, 3, NULL, 1);
   xTaskCreatePinnedToCore((void(*)(void*))&StepperTask, "Stepper", 8192, NULL, 1, NULL, 1);
-  
-  // The Web Broadcaster goes to Core 0, alongside the WiFi stack.
   xTaskCreatePinnedToCore((void(*)(void*))&WebTelemetryTask, "WebTel", 4096, NULL, 1, NULL, 0);
 }
 
 void loop() {
-  // Serial debugging and live PID tuning remains intact
   if (Serial.available() > 0) {
     char c = Serial.read();
     if (c == 'q') { isAlive1 = false; Serial.println(">>> Heartbeat 1 STOPPED"); } 
