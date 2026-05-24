@@ -11,8 +11,8 @@ const uint8_t SPI_CS = 5;
 
 // Sensor Pins
 const int PEDAL_PIN = 34;      // APPS sensor pin
-const int PEDAL_2_PIN = 33;    // APPS2 sensor pin
-const int THROTTLE_PIN = 32;   // TPPS sensor pin 
+const int PEDAL_2_PIN = 32;  //33   // APPS2 sensor pin
+const int THROTTLE_PIN = 33;   // TPPS sensor pin 
 
 // Watchdog Heartbeat Pins
 const int HEARTBEAT_1_PIN = 14; 
@@ -58,9 +58,17 @@ void StepperTask(void *pvParameters){
   TickType_t xTaskDelayTick = xTaskGetTickCount();
   
   while (true){
+    bool dir = true;
     int raw = analogRead(PEDAL_PIN);
+    Serial.println(raw);
     float target = map(raw, 0, 2500, 0, 200); 
+
+    motor.setTargetPosition(dir ? target : 0);
+    Serial.print("Target: ");
+    Serial.print(target);
+
     
+    /*
     int raw_throttle = analogRead(THROTTLE_PIN);
     float scaled_throttle = map(raw_throttle, 0, 4095, 0, 200);
     
@@ -87,6 +95,7 @@ void StepperTask(void *pvParameters){
     Serial.print(raw);
     Serial.print(" | TPS: ");
     Serial.println(raw_throttle);
+    */
 
     // Runs at 10Hz (every 100ms)
     vTaskDelayUntil(&xTaskDelayTick, 100 / portTICK_PERIOD_MS);

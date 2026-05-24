@@ -14,9 +14,9 @@ hw_timer_t *Timer0_Cfg = NULL;
 const uint8_t SPI_CS = 5; // CS pin in SPI mode
 //const uint8_t SPI_DRV_ENN = 8;  // DRV_ENN pin in SPI mode
 
-const int PEDAL_PIN = 34; //APPS sensor pin
-const int PEDAL_2_PIN = 33; //APPS2 sensor pin
-const int THROTTLE_PIN = 32; //TPPS sensor pin - note 35 is not allowed????
+const int PEDAL_PIN = 32; //APPS-2 sensor pin
+//const int PEDAL_2_PIN = 33; //APPS2 sensor pin
+//const int THROTTLE_PIN = 32; //TPPS sensor pin - note 35 is not allowed????
 
 float Kp = 10.0;
 
