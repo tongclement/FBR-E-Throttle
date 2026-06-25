@@ -9,7 +9,7 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
-  int raw = analogRead(34);
+  int raw = analogRead(32);
   Serial.println(raw);
   delay(100);
 }
